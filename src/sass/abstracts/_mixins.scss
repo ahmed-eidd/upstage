@@ -1,0 +1,16 @@
+@mixin width-center {
+  width: 90%;
+  margin: auto;
+  @media only screen and (max-width:$bp-largest) {
+    width: 100%;
+  }
+}
+
+@mixin width-section {
+  width: 80%;
+  margin:auto;
+  @media only screen and (max-width:$bp-largest) {
+    width: 100% ;
+  }
+
+}

@@ -1,0 +1,172 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // width: 90%;
+  // margin: auto;
+  @include width-center;
+  // padding: 6rem 0.5rem;
+  color: #fff;
+  font-size: 1.8rem;
+  @media only screen and (max-width: $bp-largest) {
+    flex-direction: column;
+    height: 12rem;
+  
+  }
+
+  &__logo {
+    &__img {
+      width: 16rem;
+      height: 15rem;
+      @media only screen and (max-width: $bp-largest) {
+        display: none;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    font-weight: $font-semi-bold;
+    letter-spacing: 1.8px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+      @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+      }
+    }
+    
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+// Feautres Section //
+
+.section__feature {
+  @include width-center;
+  // height: 100vh;
+  margin: 6rem auto;
+
+  &__imgs {
+    display: grid;
+    grid-gap: 5rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    margin-top: 6rem;
+    @media only screen and (max-width: 62.5em) {
+      grid-gap: 2rem;
+      -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 25rem;
+    height: 35rem;
+    // box-shadow: 0px 6px 12px $color-grey-light;
+    border-radius: 8px;
+  }
+}
+
+
+// burger menu 
+
+
+
+.burger {
+  display: none;
+}
+
+.burger .line {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+@media only screen and (max-width: $bp-small) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav__links {
+    // display: none;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 60%;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    // border-radius: 8px;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav__logo {
+    display: none;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+
+
+.btn-white {
+  padding: 1rem 4.5rem;
+  background: transparent;
+  border: $color-primary solid 1px;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    background: $color-primary;
+  }
+}
+
+.btn-red,
+.btn-red-form {
+  padding: 1rem 4.5rem;
+  background: $color-primary;
+  border: $color-primary solid 1px;
+  border-radius: 8px;
+  color: #fff;
+  margin-left: 3px;
+  transition: all 0.3s;
+  cursor: pointer;
+  // box-shadow: 0px 6px 12px rgba(#000000, 0.4);
+}
+
+.btn-red-form {
+  width: 70%;
+}

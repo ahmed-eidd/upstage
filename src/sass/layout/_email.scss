@@ -1,0 +1,55 @@
+.section__email {
+  background-color: #f4f4f4;
+  height: 60vh;
+
+  &__cont {
+    @include width-center;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 9rem;
+    color: #7f8c8d;
+  }
+
+  &__text {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  &__paragraph {
+    font-size: 1.8rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__form {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__input {
+      height: 100%;
+      width: 40rem;
+      padding-left: 2rem;
+      border: 1px solid rgba($color: grey, $alpha: 0.3);
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      margin-right: -6px;
+
+      &::placeholder {
+        font-family: $font-secondary;
+      }
+    }
+
+    &__btn {
+      border-top-left-radius: 0px !important;
+      border-bottom-left-radius: 0px !important;
+    }
+  }
+}

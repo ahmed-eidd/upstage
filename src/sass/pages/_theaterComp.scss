@@ -1,0 +1,140 @@
+.big-red {
+  font-size: 4rem;
+  color: $color-primary;
+  font-family: sans-serif;
+  @media only screen and (max-width:$bp-small) {
+    font-size: 2.4rem;
+  }
+}
+
+
+
+.section__prices {
+  
+  @include width-center;
+
+
+  &__cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width:$bp-medium) {
+      flex-direction: column;
+    }
+  }
+
+ .section__table {
+   text-align: left;
+  border-collapse: collapse;
+  width: 65%;
+  
+  font-size: 1.6rem;
+  margin: 5rem 3rem;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  @media only screen and (max-width:$bp-medium) {
+    width: 95%;
+  }
+  &__header, &__row, &__thead, &__data {
+    padding: 1rem 2rem;
+    
+  }
+  &__row, &__thead, &__data {
+    @media only screen and (max-width:$bp-small) {
+      font-size: 1.3rem;
+    }
+    
+  }
+
+
+  &__row:nth-of-type(odd) {
+    background-color: #F3F3F3;
+  }
+
+  &__header {
+    font-size: 3rem !important;
+    text-align: left;
+    font-size: 2.4rem;
+    background-color: $color-primary;
+    color: #fff;
+    font-weight: $font-regular;
+    // border-top-left-radius: 8px; 
+    // border-top-right-radius: 8px;
+    @media only screen and (max-width:$bp-smallest) {
+      font-size: 2rem !important;
+    }
+  }
+
+  &__thead {
+  
+  }
+
+  &__row:nth-child(1) {
+    background-color: #FF0C0078;
+    color: #fff;
+  }
+}
+
+
+.section__table__icon {
+  width: 2.5rem;
+  height: 2.3rem;
+}
+
+&__cards {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ min-height: 52rem;
+ text-align: center;
+ @media only screen and (max-width:$bp-medium) {
+  flex-direction: row;
+  width:100%;
+  justify-content: space-evenly;
+  min-height: 2rem;
+}
+}
+
+
+&__card {
+  box-shadow: 0 0 24px #0000002E;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 8px;
+  overflow: hidden;
+  vertical-align: middle;
+  @media only screen and (max-width:$bp-medium) {
+    width: 40%;
+  }
+
+  &__title {
+    display: block;
+    background-color: $color-primary;
+    color: #fff;
+    font-size: 2.4rem;
+    width: 100%;
+  }
+
+  &__price {
+    font-size: 1.7rem;
+    @media only screen and (max-width:$bp-medium) {
+      font-size: 1.3rem;
+      padding: 2rem 0;
+    }
+  
+  }
+
+
+}
+
+
+&__video {
+  width: 75%;
+  margin: 3rem auto 6rem auto;
+}
+
+
+}
+
+
+

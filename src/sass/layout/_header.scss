@@ -1,0 +1,65 @@
+.header__half {
+  height: 35rem;
+  background: linear-gradient(rgba(33, 33, 33, 0.6), rgba(33, 33, 33, 0.6)),
+    url('../../assests/Home/Tint-2.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  @media only screen and (max-width: $bp-small) {
+    // height: 120vh;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+    // @media only screen and (max-width: $bp-small) {
+    //   top: 30%;
+    // }
+
+    &__icons {
+      display: flex;
+      justify-content: center;
+      margin-left: 5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-left: 0;
+        margin-top: 2.5rem;
+      }
+    }
+
+    &__icon {
+      display: block;
+      height: 7.5rem;
+      width: 21rem;
+      cursor: pointer;
+      @media only screen and (max-width: 62.5em) {
+        height: 4.5rem;
+        width: 13rem;
+      }
+    }
+    &__icon--google {
+      height: 7.5rem;
+      width: 26rem;
+      margin-left: 4rem;
+      cursor: pointer;
+      @media only screen and (max-width: 62.5em) {
+        height: 4.5rem;
+        width: 14.5rem;
+      }
+    }
+  }
+}

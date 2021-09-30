@@ -1,0 +1,51 @@
+.db__wrapper {
+  height: 100vh;
+  background: linear-gradient(rgba(33, 33, 33, 0.6), rgba(33, 33, 33, 0.6)), url('../../assests/upstageDB/_MG_4680-min.JPG');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__cont {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65rem;
+    // background-color: grey;
+  }
+}
+
+.paragraph {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+  
+
+.form {
+  width: 100%;
+  text-align: center;
+}
+
+.input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  width: 90%;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  
+
+  &::placeholder {
+    color: #fff;
+    font-family: $font-secondary;
+  }
+}
+
+.btn-db {
+  width: 91% !important;
+}

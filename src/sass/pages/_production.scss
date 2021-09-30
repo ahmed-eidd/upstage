@@ -1,0 +1,14 @@
+.section__info__production {
+  height: 50rem;
+  justify-content: space-between !important;
+  @media only screen and (max-width: $bp-medium) {
+    height: 30rem;
+    
+  }
+}
+
+.section__paragraph {
+  font-size: 2rem;
+  margin-bottom: auto;
+  padding-top: 1.5rem;
+}

@@ -1,0 +1,60 @@
+.burger {
+  display: none;
+}
+
+.burger .line {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+@media only screen and (max-width: $bp-small) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header__forms {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50rem;
+    min-width: 42rem;
+  }
+  .nav__links {
+    // display: none;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 60%;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    // border-radius: 8px;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav__logo {
+    display: none;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}

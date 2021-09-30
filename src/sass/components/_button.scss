@@ -1,0 +1,33 @@
+// buttons
+
+.btn-white {
+  padding: 1rem 4.5rem;
+  background: transparent;
+  border: $color-primary solid 1px;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    background: $color-primary;
+  }
+}
+
+.btn-red,
+.btn-red-form {
+  padding: 1rem 4.5rem;
+  background: $color-primary;
+  border: $color-primary solid 1px;
+  border-radius: 8px;
+  color: #fff;
+  margin-left: 3px;
+  transition: all 0.3s;
+  cursor: pointer;
+  // box-shadow: 0px 6px 12px rgba(#000000, 0.4);
+}
+
+.btn-red-form {
+  width: 70%;
+}
+
+

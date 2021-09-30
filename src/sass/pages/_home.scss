@@ -1,0 +1,472 @@
+// a tag for buttons
+
+//  .btn-red a:visited,.btn-red a:link {
+//     color: #fff;
+//   }
+
+// Header //
+
+.header {
+  height: 100vh;
+  background: linear-gradient(rgba(33, 33, 33, 0.6), rgba(33, 33, 33, 0.6)),
+    url('../../assests/Home/Tint-2.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  @media only screen and (max-width: $bp-small) {
+    height: 120vh;
+  }
+
+  &__forms {
+    background-color: white;
+    height: 50rem;
+    width: 36rem;
+    border-radius: 8px;
+    box-shadow: 0 0px 6px #0000007a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+
+    @media only screen and (max-width: 87.5em) {
+      width: 30rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      width: 22rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 45rem;
+      min-width: 42rem;
+    }
+    @media only screen and (max-width: 320px) {
+      height: 40rem;
+    }
+  }
+
+  &__form {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 100%;
+
+    &__input {
+      border: none;
+      border-bottom: 1px solid $color-grey-light;
+      padding: 0.8rem;
+      width: 70%;
+
+      &::placeholder {
+        color: $color-grey-light;
+        font-family: $font-secondary;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__icon {
+      fill: $color-grey-light;
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      right: 15%;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    @media only screen and (max-width: $bp-small) {
+      top: 30%;
+    }
+
+    &__icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 5rem;
+    }
+
+    &__icon {
+      display: block;
+      height: 7.5rem;
+      width: 21rem;
+      cursor: pointer;
+      @media only screen and (max-width: 62.5em) {
+        height: 4.5rem;
+        width: 13rem;
+      }
+    }
+    &__icon--google {
+      height: 7.5rem;
+      width: 26rem;
+      margin-left: 4rem;
+      cursor: pointer;
+      @media only screen and (max-width: 62.5em) {
+        height: 4.5rem;
+        width: 14.5rem;
+      }
+    }
+  }
+}
+
+// Navigition //
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // width: 90%;
+  // margin: auto;
+  @include width-center;
+  // padding: 6rem 0.5rem;
+  color: #fff;
+  font-size: 1.8rem;
+  @media only screen and (max-width: $bp-largest) {
+    flex-direction: column;
+    height: 10%;
+  }
+
+  &__logo {
+    &__img {
+      width: 16rem;
+      height: 15rem;
+      @media only screen and (max-width: $bp-largest) {
+        display: none;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    font-weight: $font-semi-bold;
+    letter-spacing: 1.8px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+// Feautres Section //
+
+.section__feature {
+  @include width-center;
+  // height: 100vh;
+  margin: 6rem auto;
+
+  &__imgs {
+    display: grid;
+    grid-gap: 5rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    margin-top: 6rem;
+    justify-items: center;
+
+    @media only screen and (max-width: 62.5em) {
+      grid-gap: 2rem;
+      -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 25rem;
+    height: 35rem;
+    // box-shadow: 0px 6px 12px $color-grey-light;
+    border-radius: 8px;
+    @media only screen and (max-width: $bp-smallest) {
+      width: 18rem;
+      height: 28rem;
+    }
+  }
+}
+
+// About Section //
+
+.section__about {
+  background: linear-gradient(rgba(39, 48, 54, 0.8), rgba(39, 48, 54, 0.8)),
+    url('../../assests/Home/theater-background.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    width: 60%;
+    @media only screen and (max-width: 62.5em) {
+      width: 90%;
+    }
+  }
+  &__paragraph {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 3rem 0;
+    font-weight: $font-regular;
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 0.8rem 0;
+    }
+    @media only screen and (max-width: 320px) {
+      margin: 0.3rem 0;
+    }
+  }
+}
+
+// Contact Section //
+
+.contact {
+  @include width-section;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60vh;
+  @media only screen and (max-width: $bp-small) {
+    height: 100%;
+    margin: 6rem 0;
+    flex-direction: column;
+
+    &__paragraph {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-self: center;
+    margin: 0 auto;
+    @media only screen and (max-width: $bp-small) {
+      width: 50%;
+      text-align: start;
+    }
+    @media only screen and (max-width: 320px) {
+      width: 60%;
+    }
+
+    &__cont {
+      display: flex;
+      align-items: center;
+    }
+
+    &__paragraph {
+      margin-left: 2rem;
+      padding: 1rem;
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: $font-regular;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.3rem;
+      }
+    }
+
+    &__icon {
+      fill: $color-primary;
+      display: inline-block;
+      height: 2.8rem;
+      width: 2.8rem;
+    }
+  }
+
+  &__form {
+    width: 50%;
+    @media only screen and (max-width: $bp-small) {
+      width: 80%;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    &__box {
+      @media only screen and (max-width: 62.5em) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    &__input {
+      border: none;
+      border-bottom: 1px solid $color-grey-light;
+      padding: 1rem 0rem;
+      margin: 5.3rem 0rem;
+
+      @media only screen and (max-width: 62.5em) {
+        margin: 3rem 0;
+        width: 60%;
+      }
+      @media only screen and (max-width: $bp-small) {
+        width: 100%;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        font-family: $font-secondary;
+      }
+      &:nth-child(1) {
+        margin-right: 5rem;
+        @media only screen and (max-width: 62.5em) {
+          margin-right: 0rem;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 22.8rem;
+        @media only screen and (max-width: 62.5em) {
+          width: 60%;
+        }
+        @media only screen and (max-width: $bp-small) {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: block;
+        width: 45rem;
+        @media only screen and (max-width: 62.5em) {
+          width: 60%;
+        }
+        @media only screen and (max-width: $bp-small) {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(3) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Professionals Section
+
+.professionals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: linear-gradient(rgba(39, 48, 54, 0.8), rgba(39, 48, 54, 0.8)),
+    url('../../assests/Home/background_pro.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  &__wrapper {
+    @include width-center;
+  }
+
+  &__cont-1 {
+    display: flex;
+    justify-content: center;
+    margin: 7rem;
+
+    @media only screen and (max-width: 87.5em) {
+      margin: 4rem 0;
+    }
+    @media only screen and (max-width: $bp-small) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      justify-items: center;
+      margin: 4rem 0;
+      grid-row-gap: 2rem;
+      justify-items: center;
+      // &:last-child {
+      //   grid-column: 1/-1;
+      // }
+    }
+    @media only screen and (max-width: 320px) {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+  }
+
+  &__cont-2 {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+    @media only screen and (max-width: $bp-small) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      justify-items: center;
+
+      grid-row-gap: 2rem;
+      // &:last-child {
+      //   grid-column: 1/-1;
+      // }
+    }
+  }
+  &__figure {
+    width: 15%;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 16rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      &:nth-child(5) {
+        grid-column: 1/-1;
+      }
+    }
+  }
+  &__text {
+    color: white;
+    font-size: 2.4rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.5rem;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+
+  .img--link:hover {
+    transform: translateY(-3px);
+    transition: transform 0.5s ease, filter 0.3s;
+    filter: grayscale(100%);
+  }
+}
+
+// Email Section //
