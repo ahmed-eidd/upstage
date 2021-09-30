@@ -1,10 +1,13 @@
 import React from 'react'
-import classes from './Layout.module.scss';
+import Footer from '../Footer/Footer';
+import Nav from '../Nav/Nav';
 
-const Layout = () => {
+const Layout = ({children}) => {
   return (
     <div>
-      
+      <Nav /> 
+      {children}
+      <Footer />
     </div>
   )
 }

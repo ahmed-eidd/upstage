@@ -1,0 +1,30 @@
+@import '../../sass/abstracts/index';
+
+.inputContainer {
+  width: 100%;
+  min-height: 6.5rem;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid $color-grey-light;
+  padding: 0.8rem;
+  width: 100%;
+
+  &::placeholder {
+    color: $color-grey-light;
+    font-family: $font-secondary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.ErrorMessage {
+  color: red;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  text-align: start;
+  margin-top: 0.5rem;
+}

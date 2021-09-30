@@ -6,39 +6,6 @@
 @import 'abstracts/variables';
  
 
-// Typography //
-
-
-@import 'typography/typography';
-@import 'typography/headings';
-
-
-// Pages //
-
-
-@import 'pages/home';
-@import 'pages/production';
-@import 'pages/theaterComp';
-@import 'pages/upstageDB';
-@import 'pages/login';
-@import 'Pages/upstage-db';
-@import 'Pages/search';
-@import 'Pages/play-search-page';
-@import 'typography/headings';
-
-// Layouts //
-
-
-@import 'layout/footer';
-@import 'layout/signup';
-@import 'layout/starsSections';
-@import 'layout/footer';
-@import 'layout/email';
-@import 'layout/nav';
-@import 'layout/header';
-@import 'layout/checkbox';
-
-
 
 // Base //
 
@@ -46,12 +13,7 @@
 @import 'base/base';
 
 
-// Components //
-
-
-@import 'components/button';
-@import 'components/burgerMenu';
-
+@import 'typography/headings';
 
 
 

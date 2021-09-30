@@ -28,9 +28,8 @@
 }
 
 .heading-3--red,.heading-3--white {
-  
-  font-weight: $font-semi-bold;
   font-size: 5.5rem;
+  font-weight: 400;
   @media only screen and (max-width:$bp-small) {
     font-size: 4rem;
    }

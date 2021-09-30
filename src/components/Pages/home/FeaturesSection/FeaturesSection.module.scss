@@ -1,0 +1,19 @@
+@import '../../../../sass/abstracts/index';
+
+.featuresSection {
+  display: grid;
+  grid-gap: 5rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  margin-top: 6rem;
+  justify-items: center;
+
+  @media only screen and (max-width: 62.5em) {
+    grid-gap: 2rem;
+    -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+}

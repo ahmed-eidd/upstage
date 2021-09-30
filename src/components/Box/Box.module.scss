@@ -1,0 +1,9 @@
+@import '../../sass/abstracts/index';
+
+.Box {
+  width: 80%;
+  margin: 6rem auto;
+  @media only screen and (max-width: $bp-largest) {
+    width: 100%;
+  }
+}
