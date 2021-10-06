@@ -1,0 +1,23 @@
+@import '../../sass/abstracts/index';
+
+.Dashboard {
+  &__DashboardItems {
+    padding: 2rem 0;
+    max-width: 175rem;
+
+    border: 1px solid$color-grey-light;
+    background-color: $color-off-white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 7rem auto;
+  }
+
+  &__Main {
+    display: grid;
+    grid-template-columns: 1fr repeat(8, 19.2rem) 1fr;
+    &__Content {
+      grid-column: 2/10;
+    }
+  }
+}

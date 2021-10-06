@@ -1,0 +1,41 @@
+@import '../../sass/abstracts/index';
+
+.Header {
+  grid-column: 2/8;
+}
+
+.TableContainer {
+  grid-column: 2/8;
+  @include boxshadowContainer;
+}
+
+.ProductionTeam {
+  grid-column: 2/8;
+  @include boxshadowContainer;
+
+  .Title {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 1rem;
+  }
+
+  &__Container {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    p {
+      font-size: 1.8rem;
+    }
+  }
+
+  .RedDot {
+    width: 17px;
+    height: 17px;
+    border-radius: 500px;
+    background: $color-primary;
+    margin-right: 1rem;
+  }
+}

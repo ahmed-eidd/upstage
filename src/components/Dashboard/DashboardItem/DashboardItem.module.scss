@@ -1,0 +1,24 @@
+@import '../../../sass/abstracts/index';
+
+.DashboardItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__Icon {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin-bottom: 2rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__Name {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
+
+.active {
+  color: $color-primary;
+}

@@ -1,0 +1,11 @@
+@import '../../sass/abstracts/index';
+
+.MiniHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3.6rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba($color: $color-grey-light, $alpha: .5);
+  padding-bottom: 2rem;
+}

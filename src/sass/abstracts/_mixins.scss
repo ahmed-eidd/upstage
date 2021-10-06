@@ -1,16 +1,20 @@
 @mixin width-center {
   width: 90%;
   margin: auto;
-  @media only screen and (max-width:$bp-largest) {
+  @media only screen and (max-width: $bp-largest) {
     width: 100%;
   }
 }
 
 @mixin width-section {
   width: 80%;
-  margin:auto;
-  @media only screen and (max-width:$bp-largest) {
-    width: 100% ;
+  margin: auto;
+  @media only screen and (max-width: $bp-largest) {
+    width: 100%;
   }
+}
 
+@mixin boxshadowContainer {
+  padding: 4rem;
+  box-shadow: 0 0 12px rgba($color: #000000, $alpha: 0.15);
 }
