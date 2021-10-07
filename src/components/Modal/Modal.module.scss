@@ -1,0 +1,46 @@
+@import '../../sass/abstracts/index';
+
+.Backdrop {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.Modal {
+  background-color: white;
+  width: 82rem;
+  position: relative;
+  border-top-left-radius: $border-raduis-m;
+  border-top-right-radius: $border-raduis-m;
+
+  &__CloseBtn {
+    top: -25%;
+    right: -5%;
+    position: absolute;
+    height: 8.5rem;
+    width: 8.5rem;
+    border-radius: 500px;
+    background-color: $color-primary-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    i {
+      color: $color-primary;
+      font-size: 4rem;
+    }
+  }
+
+  &__Title {
+    border-top-left-radius: $border-raduis-m;
+    border-top-right-radius: $border-raduis-m;
+    font-size: 4.4rem;
+    font-weight: bold;
+    color: white;
+    background-color: $color-primary;
+    text-align: center;
+    padding: 2rem;
+  }
+}

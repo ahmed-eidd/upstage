@@ -3,5 +3,9 @@
   grid-template-columns: repeat(8,1fr);
   column-gap: 3rem;
   row-gap: 3rem;
-  
+
+}
+
+.AddRows {
+  grid-template-rows: repeat(auto-fit,14rem);
 }

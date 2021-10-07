@@ -21,7 +21,7 @@
     background-color: white;
     height: 50rem;
     width: 36rem;
-    border-radius: 8px;
+    border-radius: $border-raduis-m;
     box-shadow: 0 0px 6px #0000007a;
     display: flex;
     flex-direction: column;
@@ -206,7 +206,7 @@
     width: 25rem;
     height: 35rem;
     // box-shadow: 0px 6px 12px $color-grey-light;
-    border-radius: 8px;
+    border-radius: $border-raduis-m;
     @media only screen and (max-width: $bp-smallest) {
       width: 18rem;
       height: 28rem;

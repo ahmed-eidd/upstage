@@ -76,7 +76,7 @@
     width: 25rem;
     height: 35rem;
     // box-shadow: 0px 6px 12px $color-grey-light;
-    border-radius: 8px;
+    border-radius: $border-raduis-m;
   }
 }
 
@@ -145,7 +145,7 @@
   padding: 1rem 4.5rem;
   background: transparent;
   border: $color-primary solid 1px;
-  border-radius: 8px;
+  border-radius: $border-raduis-m;
   color: #fff;
   transition: all 0.3s;
   cursor: pointer;
@@ -159,7 +159,7 @@
   padding: 1rem 4.5rem;
   background: $color-primary;
   border: $color-primary solid 1px;
-  border-radius: 8px;
+  border-radius: $border-raduis-m;
   color: #fff;
   margin-left: 3px;
   transition: all 0.3s;

@@ -1,0 +1,13 @@
+@import '../../sass/abstracts/index';
+
+.PageTwo {
+
+  &__Header {
+    grid-column: 2/8;
+  }
+
+  &__TableContainer {
+    grid-column: 2/8;
+    @include boxshadowContainer;
+  }
+}

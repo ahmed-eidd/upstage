@@ -1,12 +1,18 @@
-import React from 'react'
-import classes from './Table.module.scss'
+import React from 'react';
+import { extendClasses } from '../../utilities/extendClasses';
+import classes from './Table.module.scss';
 
-const Table = ({children, allwhite}) => {
+const Table = ({ children, allwhite, className }) => {
   return (
-    <table className={!allwhite ? classes.Table : classes.TableAllWhite}>
+    <table
+      className={extendClasses(
+        !allwhite ? classes.Table : classes.TableAllWhite,
+        className
+      )}
+    >
       {children}
     </table>
-  )
-}
+  );
+};
 
-export default Table
+export default Table;

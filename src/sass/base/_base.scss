@@ -1,8 +1,6 @@
 @import '../abstracts/variables';
 
-
 // Base Styling
-
 
 * {
   margin: 0;
@@ -19,7 +17,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
 
-  @media only screen and (max-width:$bp-largest) {
+  @media only screen and (max-width: $bp-largest) {
     font-size: 50%;
   }
 }
@@ -33,26 +31,34 @@ body {
   // background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   // background-size: cover;
   // background-repeat: no-repeat;
-
-  min-height: 100vh;
 }
 
 a {
   text-decoration: none;
 }
 
-a:hover { text-decoration: none; }
-a:focus { text-decoration: none; }
-a:hover, a:active { text-decoration:none;}
-a:link,a:visited {color: inherit;};
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  color: inherit;
+}
 
-input {font-family: $font-secondary;}
+input {
+  font-family: $font-secondary;
+}
 input:focus {
   outline: none;
-
 }
 // .wrapper {
 //   display: grid;
 //   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 // }
-

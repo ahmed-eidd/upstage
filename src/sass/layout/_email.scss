@@ -38,8 +38,8 @@
       width: 40rem;
       padding-left: 2rem;
       border: 1px solid rgba($color: grey, $alpha: 0.3);
-      border-top-left-radius: 8px;
-      border-bottom-left-radius: 8px;
+      border-top-left-radius: $border-raduis-m;
+      border-bottom-left-radius: $border-raduis-m;
       margin-right: -6px;
 
       &::placeholder {

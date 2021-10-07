@@ -1,0 +1,28 @@
+@import '../../sass/abstracts/index';
+
+.RedTitledBox {
+  overflow: hidden;
+  border-top-left-radius: $border-raduis-s;
+  border-bottom-left-radius: $border-raduis-s;
+  border-bottom-right-radius: $border-raduis-s;
+  border-top-right-radius: $border-raduis-s;
+  overflow: hidden;
+  &__Title {
+    padding: 10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: $color-primary;
+    color: white;
+  }
+  &__Content {
+    padding: 10px;
+    border-bottom: 1px solid $color-grey-light;
+    border-left: 1px solid $color-grey-light;
+    border-right: 1px solid $color-grey-light;
+    border-bottom-left-radius: $border-raduis-s;
+    border-bottom-right-radius: $border-raduis-s;
+  }
+}

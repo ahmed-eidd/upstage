@@ -10,11 +10,13 @@ const Button = ({
   varient = 'filled',
   type = 'button',
   to,
+  onClick
 }) => {
   return (
     <>
       {type === 'link' ? (
         <Link
+          onClick={onClick}
           to={to}
           style={style}
           className={extendClasses(
@@ -27,6 +29,7 @@ const Button = ({
         </Link>
       ) : (
         <button
+          onClick={onClick}
           type={type}
           style={style}
           className={extendClasses(

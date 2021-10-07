@@ -30,7 +30,7 @@
   
   font-size: 1.6rem;
   margin: 5rem 3rem;
-  border-radius: 8px 8px 0 0;
+  border-radius: $border-raduis-m $border-raduis-m 0 0;
   overflow: hidden;
   @media only screen and (max-width:$bp-medium) {
     width: 95%;
@@ -100,7 +100,7 @@
   box-shadow: 0 0 24px #0000002E;
   width: 22rem;
   height: 22rem;
-  border-radius: 8px;
+  border-radius: $border-raduis-m;
   overflow: hidden;
   vertical-align: middle;
   @media only screen and (max-width:$bp-medium) {
