@@ -1,0 +1,32 @@
+.Header {
+  grid-column: 2/8;
+
+  &__SideButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.Table {
+  grid-column: 2/8;
+
+  &__IconsRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+
+    &__Icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+}
+
+.FullWidth {
+  width: 100%;
+}

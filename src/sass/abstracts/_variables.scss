@@ -6,6 +6,7 @@ $color-off-white: #f9f9f9;
 $color-primary-dark: #BF0A30; 
 $color-grey-light:#ABABAB;
 $color-grey-dark: #D5D5D5;
+$color-font-grey: #5F5F5F;
 
 
 // Media Queries
@@ -22,7 +23,7 @@ $bp-smallest: 31.25em; // 500px
 // fonts
 
 $font-primary: 'Signika' , sans-serif;
-$font-secondary: 'Poppins', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
 
 
 // Sizes 
@@ -36,3 +37,7 @@ $font-bold: 700;
 
 $border-raduis-m: 8px;
 $border-raduis-s: 4px;
+
+
+// box shadow or border
+

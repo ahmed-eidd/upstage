@@ -7,6 +7,11 @@ import Home from './containers/Home/Home';
 import Dashboard from './components/Dashboard/Dashboard';
 import PageTwo from './Prototypes/PageTwo/PageTwo';
 import PageThree from './Prototypes/PageThree/PageThree';
+import PageFour from './Prototypes/PageFour/PageFour';
+import PageFive from './Prototypes/PageFive/PageFive';
+import PageSix from './Prototypes/PageSix/PageSix';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
   return (
@@ -25,6 +30,9 @@ function App() {
       <AppRoute exact path='/login' layout={Dashboard} component={CatalogOfPlay} />
       <AppRoute exact path='/page2' layout={Dashboard} component={PageTwo} />
       <AppRoute exact path='/page3' layout={Dashboard} component={PageThree} />
+      <AppRoute exact path='/page4' layout={Dashboard} component={PageFour} />
+      <AppRoute exact path='/page5' layout={Dashboard} component={PageFive} />
+      <AppRoute exact path='/page6' layout={Dashboard} component={PageSix} />
     </Switch>
   );
 }

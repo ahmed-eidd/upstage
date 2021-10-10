@@ -9,8 +9,9 @@ const Button = ({
   className,
   varient = 'filled',
   type = 'button',
+  color = 'red',
   to,
-  onClick
+  onClick,
 }) => {
   return (
     <>
@@ -22,7 +23,9 @@ const Button = ({
           className={extendClasses(
             classes.btn,
             className,
-            varient === 'filled' ? classes.filled : classes.outlined
+            varient === 'filled' ? classes.filled : classes.outlined,
+            color === 'red' && classes.filledRed,
+            color === 'black' && classes.filledBlack
           )}
         >
           {children}
@@ -35,7 +38,9 @@ const Button = ({
           className={extendClasses(
             classes.btn,
             className,
-            varient === 'filled' ? classes.filled : classes.outlined
+            varient === 'filled' ? classes.filled : classes.outlined,
+            color === 'red' && classes.filledRed,
+            color === 'black' && classes.filledBlack
           )}
         >
           {children}

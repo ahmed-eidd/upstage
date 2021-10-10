@@ -1,11 +1,11 @@
 .GridBox {
   display: grid;
-  grid-template-columns: repeat(8,1fr);
+  grid-template-columns: repeat(8, 1fr);
   column-gap: 3rem;
   row-gap: 3rem;
-
 }
 
 .AddRows {
-  grid-template-rows: repeat(auto-fit,14rem);
+  grid-template-rows: repeat(auto-fit, 14rem);
+  min-height: 90vh;
 }
