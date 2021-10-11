@@ -24,6 +24,7 @@ const Button = ({
             classes.btn,
             className,
             varient === 'filled' ? classes.filled : classes.outlined,
+            color === 'grey' && classes.filledGrey,
             color === 'red' && classes.filledRed,
             color === 'black' && classes.filledBlack
           )}
@@ -40,7 +41,8 @@ const Button = ({
             className,
             varient === 'filled' ? classes.filled : classes.outlined,
             color === 'red' && classes.filledRed,
-            color === 'black' && classes.filledBlack
+            color === 'black' && classes.filledBlack,
+            color === 'grey' && classes.filledGrey
           )}
         >
           {children}

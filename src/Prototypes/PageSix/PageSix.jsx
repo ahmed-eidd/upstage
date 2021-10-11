@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './PageSix.module.scss';
 import GridBox from '../../components/GridBox/GridBox';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
@@ -9,9 +9,15 @@ import ReviewIcon from '../../assests/Login/favourite.png';
 import RedTitledBox from '../../components/RedTitledBox/RedTitledBox';
 import ActorCard from '../../components/ActorCard/ActorCard';
 import Avatar from '../../assests/Login/avatar.jpg';
-import Slider from 'react-slick';
+import Table from '../../components/Table/Table';
+import ShoppingIcon from '../../assests/Login/order.png';
+import Flex from '../../components/Flex/Flex';
+import Modal from '../../components/Modal/Modal';
+import Input from '../../components/Input/Input';
 
 const PageSix = () => {
+  const [followModal, setFollowModal] = useState(false);
+  const [reviewModal, setReviewModal] = useState(false);
 
   return (
     <GridBox addRows>
@@ -38,7 +44,10 @@ const PageSix = () => {
             Ratings: <span>Parental Direction</span>
           </p>
 
-          <div className={classes.PlayCard__Info__FollowBtn}>
+          <div
+            onClick={() => setFollowModal(true)}
+            className={classes.PlayCard__Info__FollowBtn}
+          >
             <img src={FollowIcon} /> Follow this play
           </div>
           <div className={classes.PlayCard__Info__ReviewBtn}>
@@ -63,30 +72,146 @@ const PageSix = () => {
         ></iframe>
       </div>
 
-      <RedTitledBox title='Actor/Actress' className={classes.PlayActors} slider sliderClassName={classes.PlayActors__List}>
-       
-          <ActorCard img={Avatar} name='Ramon Anderson' role='Joey (Teen)' />
-          <ActorCard img={Avatar} name='Shonda Williams' role='Mom' />
-          <ActorCard
-            img={Avatar}
-            name='Nicholas Richardson'
-            role='June (Teen)'
-          />
-          <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
-  
+      <RedTitledBox
+        title='Actor/Actress'
+        className={classes.PlayActors}
+        slider
+        sliderClassName={classes.PlayActors__List}
+      >
+        <ActorCard img={Avatar} name='Ramon Anderson' role='Joey (Teen)' />
+        <ActorCard img={Avatar} name='Shonda Williams' role='Mom' />
+        <ActorCard img={Avatar} name='Nicholas Richardson' role='June (Teen)' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
       </RedTitledBox>
-        <RedTitledBox title='Play stage crew / production team' className={classes.PlayProductionTeam} slider sliderClassName={classes.PlayActors__List}>
-       
-          <ActorCard img={Avatar} name='Ramon Anderson' role='Joey (Teen)' />
-          <ActorCard img={Avatar} name='Shonda Williams' role='Mom' />
-          <ActorCard
-            img={Avatar}
-            name='Nicholas Richardson'
-            role='June (Teen)'
-          />
-          <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
-  
+      <RedTitledBox
+        title='Play stage crew / production team'
+        className={classes.PlayProductionTeam}
+        slider
+        sliderClassName={classes.PlayActors__List}
+      >
+        <ActorCard img={Avatar} name='Ramon Anderson' role='Joey (Teen)' />
+        <ActorCard img={Avatar} name='Shonda Williams' role='Mom' />
+        <ActorCard img={Avatar} name='Nicholas Richardson' role='June (Teen)' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
+        <ActorCard img={Avatar} name='Marvin Vega' role='Ray-Ray' />
       </RedTitledBox>
+      <RedTitledBox title='Tickets' className={classes.PlayTickets}>
+        <Table className={classes.PlayTickets__Table}>
+          <thead>
+            <tr>
+              <th>VIP seating</th>
+              <th>General seating</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>Sept 3, 2021</p>
+                <Flex justify='flex-start' align='center' gap='1rem'>
+                  <Button color='black'>2</Button>
+                  <Button color='black'>$10.00</Button>
+                </Flex>
+              </td>
+              <td>
+                <p>Sept 3, 2021</p>
+                <Flex justify='flex-start' align='center' gap='1rem'>
+                  <Button color='black'>2</Button>
+                  <Button color='black'>$10.00</Button>
+                  <Button color='black'>$20.00</Button>
+                </Flex>
+              </td>
+              <td>
+                <div>
+                  <Flex justify='flex-start' align='center' gap='1rem'>
+                    <img src={ShoppingIcon} alt='order' />
+                    <Button>Checkout</Button>
+                  </Flex>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Sept 3, 2021</p>
+                <Flex justify='flex-start' align='center' gap='1rem'>
+                  <Button color='black'>2</Button>
+                  <Button color='black'>$10.00</Button>
+                </Flex>
+              </td>
+              <td>
+                <p>Sept 3, 2021</p>
+                <Flex justify='flex-start' align='center' gap='1rem'>
+                  <Button color='black'>2</Button>
+                  <Button color='black'>$10.00</Button>
+                  <Button color='black'>$20.00</Button>
+                </Flex>
+              </td>
+              <td>
+                <Flex justify='flex-start' align='center' gap='1rem'>
+                  <img src={ShoppingIcon} alt='order' />
+                  <Button>Checkout</Button>
+                </Flex>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Sept 3, 2021</p>
+                <Flex justify='flex-start' align='center' gap='1rem'>
+                  <Button color='black'>2</Button>
+                  <Button color='black'>$10.00</Button>
+                </Flex>
+              </td>
+              <td>
+                <p>Sept 3, 2021</p>
+                <Flex justify='flex-start' align='center' gap='1rem'>
+                  <Button color='black'>2</Button>
+                  <Button color='black'>$10.00</Button>
+                  <Button color='black'>$20.00</Button>
+                </Flex>
+              </td>
+              <td>
+                <Flex justify='flex-start' align='center' gap='1rem'>
+                  <img src={ShoppingIcon} alt='order' />
+                  <Button>Checkout</Button>
+                </Flex>
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      </RedTitledBox>
+      <Modal
+        title='Follow this play'
+        className={classes.FollowModal}
+        open={followModal}
+      >
+        <p>
+          You have elected to follow the play Blood Brothers. If there are any
+          performances or changes to the dates you will be notified.
+        </p>
+        <p>Please enter email address where notification are to be sent</p>
+        <Flex justify='flex-end' align='center' gap='1rem'>
+          <Button color='grey'>Cancel</Button>
+          <Button>Done</Button>
+        </Flex>
+      </Modal>
+
+      <Modal title='Add a review' className={classes.ReviewModal}></Modal>
+
+      <Modal title='Playbill' className={classes.PlayBillModal}>
+        <div className={classes.PlayBillModal__Img}>
+          <img src={PlayImg} alt='play' />
+        </div>
+        <p>Sept 3-13, 2021</p>
+        <p>777 N. Green Chicago, IL 60607</p>
+        <p>7pm-10pm</p>
+      </Modal>
     </GridBox>
   );
 };

@@ -6,7 +6,7 @@ import {extendClasses} from '../../utilities/extendClasses.js'
 
 ReactModal.setAppElement('#root');
 
-const Modal = ({ open, onClose, children,className }) => {
+const Modal = ({ open, onClose, children,className, title }) => {
   return (
       <ReactModal
         isOpen={open}
@@ -24,7 +24,7 @@ const Modal = ({ open, onClose, children,className }) => {
         <div onClick={onClose} className={classes.Modal__CloseBtn}>
           <i className="fas fa-times"></i>
         </div>
-        <h3 className={classes.Modal__Title}>Title</h3>
+        <h3 className={classes.Modal__Title}>{title}</h3>
         {children}
       </ReactModal>
 

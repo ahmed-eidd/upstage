@@ -26,3 +26,19 @@
     border-bottom-right-radius: $border-raduis-s;
   }
 }
+
+.NextArrow {
+  &:before {
+    content: '\f053' !important;
+    font-family: '';
+    color: red;
+  }
+}
+
+.ContentSlider {
+  .slick-arrow .slick-next{
+    &::before {
+      color: black !important;
+    }
+  }
+}

@@ -6,6 +6,6 @@
 }
 
 .AddRows {
-  grid-template-rows: repeat(auto-fit, 14rem);
+  grid-auto-rows: minmax(14rem, auto);
   min-height: 90vh;
 }
