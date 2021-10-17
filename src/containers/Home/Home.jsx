@@ -4,6 +4,7 @@ import ContactSection from '../../components/Pages/home/ContactSection/ContactSe
 import EmailSection from '../../components/Pages/home/EmailSection/EmailSection';
 import FeaturesSection from '../../components/Pages/home/FeaturesSection/FeaturesSection';
 import Header from '../../components/Pages/home/Header/Header';
+import Professionals from '../../components/Pages/home/Professionals/Professionals';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <FeaturesSection />
       <AboutSection/>
       <ContactSection />
+      <Professionals />
       <EmailSection />
     </div>
   )

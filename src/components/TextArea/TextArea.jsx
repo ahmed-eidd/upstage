@@ -1,8 +1,8 @@
-import React from 'react';
-import classes from './Input.module.scss';
 import { ErrorMessage, Field } from 'formik';
+import React from 'react';
+import classes from './TextArea.module.scss'
 
-const Input = ({
+const TextArea = ({
   name,
   label,
   placeholder,
@@ -10,20 +10,21 @@ const Input = ({
   style,
   ...props
 }) => {
-  const inputStyle = () => {
+  const TextAreaStyle = () => {
     if (varient === 'outlined') {
-      return classes.input;
+      return classes.TextArea;
     } else if (varient === 'filled') {
-      return classes.inputGrey;
+      return classes.TextAreaGrey;
     }
   };
   return (
-    <div className={classes.inputContainer} style={style}>
+    <div className={classes.TextAreaContainer} style={style}>
       <label htmlFor={name}> {label}</label>
       <Field
+        component='textarea' 
         name={name}
         {...props}
-        className={inputStyle()}
+        className={TextAreaStyle()}
         placeholder={placeholder}
       />
       <ErrorMessage name={name}>
@@ -33,4 +34,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default TextArea;

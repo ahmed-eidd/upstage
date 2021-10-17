@@ -9,5 +9,9 @@
   &__TableContainer {
     grid-column: 2/8;
     @include boxshadowContainer;
+
+    table {
+      margin: 1rem 0;
+    }
   }
 }

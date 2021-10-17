@@ -16,6 +16,9 @@
   &__Main {
     display: grid;
     grid-template-columns: 1fr repeat(8, 19.2rem) 1fr;
+    @media only screen and (max-width: 1377px) {
+    grid-template-columns: 1fr repeat(8, 16rem) 1fr;
+    }
     &__Content {
       grid-column: 2/10;
     }

@@ -12,6 +12,7 @@ import PageFive from './Prototypes/PageFive/PageFive';
 import PageSix from './Prototypes/PageSix/PageSix';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import PageSeven from './Prototypes/PageSeven/PageSeven';
 
 function App() {
   return (
@@ -27,12 +28,13 @@ function App() {
     // </Route>
     <Switch>
       <AppRoute exact path='/' layout={Layout} component={Home} />
-      <AppRoute exact path='/login' layout={Dashboard} component={CatalogOfPlay} />
+      <AppRoute exact path='/page1' layout={Dashboard} component={CatalogOfPlay} />
       <AppRoute exact path='/page2' layout={Dashboard} component={PageTwo} />
       <AppRoute exact path='/page3' layout={Dashboard} component={PageThree} />
       <AppRoute exact path='/page4' layout={Dashboard} component={PageFour} />
       <AppRoute exact path='/page5' layout={Dashboard} component={PageFive} />
       <AppRoute exact path='/page6' layout={Dashboard} component={PageSix} />
+      {/* <AppRoute exact path='/page7' layout={Dashboard} component={PageSeven} /> */}
     </Switch>
   );
 }

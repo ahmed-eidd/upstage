@@ -17,7 +17,7 @@ const Nav = () => {
         <NavItem to='/contactus'>Contact Us</NavItem>
         <NavItem to='/upstagedb'>Upstage DB</NavItem>
       </ul>
-      <div className='nav__btns'>
+      <div className={ classes.nav__btns }>
         <Button type='link' varient='outlined' to='/login'>Login</Button>
         <Button>Sign up</Button>
       </div>

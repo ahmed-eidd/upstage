@@ -6,11 +6,11 @@ import {extendClasses} from '../../utilities/extendClasses.js'
 
 ReactModal.setAppElement('#root');
 
-const Modal = ({ open, onClose, children,className, title }) => {
+const Modal = ({ open, onClose, children,className, title, size='m' }) => {
   return (
       <ReactModal
         isOpen={open}
-        className={extendClasses(classes.Modal,className)}
+        className={extendClasses(classes.Modal,className,size === 'm' && classes.size_m, size === 's' && classes.size_s)}
         onRequestClose={onClose}
         style={{
           overlay: {
@@ -25,7 +25,10 @@ const Modal = ({ open, onClose, children,className, title }) => {
           <i className="fas fa-times"></i>
         </div>
         <h3 className={classes.Modal__Title}>{title}</h3>
+        <div className={classes.Modal__Content}>
+
         {children}
+        </div>
       </ReactModal>
 
   );

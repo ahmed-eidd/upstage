@@ -14,10 +14,14 @@ import ShoppingIcon from '../../assests/Login/order.png';
 import Flex from '../../components/Flex/Flex';
 import Modal from '../../components/Modal/Modal';
 import Input from '../../components/Input/Input';
+import FollowModal from './FollowModal';
+import PlayModal from './PlayModal';
+import ReviewModal from './ReviewModal';
 
 const PageSix = () => {
-  const [followModal, setFollowModal] = useState(false);
-  const [reviewModal, setReviewModal] = useState(false);
+  const [followModalOpen, setFollowModal] = useState(false);
+  const [reviewModalOpen, setReviewModal] = useState(false);
+  const [playModalOpen, setPlayModal] = useState(false);
 
   return (
     <GridBox addRows>
@@ -50,12 +54,12 @@ const PageSix = () => {
           >
             <img src={FollowIcon} /> Follow this play
           </div>
-          <div className={classes.PlayCard__Info__ReviewBtn}>
+          <div onClick={() => setReviewModal(true)} className={classes.PlayCard__Info__ReviewBtn}>
             <img src={ReviewIcon} /> Add a review
           </div>
 
           <div className={classes.PlayCard__Info__ActionBtnsContainer}>
-            <Button> View PlayBill</Button>
+            <Button onClick={() => setPlayModal(true)}> View PlayBill</Button>
             <Button color='black'>Buy Tickets</Button>
           </div>
         </div>
@@ -186,32 +190,13 @@ const PageSix = () => {
           </tbody>
         </Table>
       </RedTitledBox>
-      <Modal
-        title='Follow this play'
-        className={classes.FollowModal}
-        open={followModal}
-      >
-        <p>
-          You have elected to follow the play Blood Brothers. If there are any
-          performances or changes to the dates you will be notified.
-        </p>
-        <p>Please enter email address where notification are to be sent</p>
-        <Flex justify='flex-end' align='center' gap='1rem'>
-          <Button color='grey'>Cancel</Button>
-          <Button>Done</Button>
-        </Flex>
-      </Modal>
+      <FollowModal open={followModalOpen} onClose={() => setFollowModal(false)} />
 
-      <Modal title='Add a review' className={classes.ReviewModal}></Modal>
+      <ReviewModal open={reviewModalOpen} onClose={() => setReviewModal(false)} title='Add a review' className={classes.ReviewModal}></ReviewModal>
 
-      <Modal title='Playbill' className={classes.PlayBillModal}>
-        <div className={classes.PlayBillModal__Img}>
-          <img src={PlayImg} alt='play' />
-        </div>
-        <p>Sept 3-13, 2021</p>
-        <p>777 N. Green Chicago, IL 60607</p>
-        <p>7pm-10pm</p>
-      </Modal>
+      <PlayModal open={playModalOpen} onClose={() => setPlayModal(false)} > 
+        
+      </PlayModal>
     </GridBox>
   );
 };

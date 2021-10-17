@@ -1,0 +1,9 @@
+.Professionals {
+  @media only screen and (max-width: 1377px) {
+    width: 90%;
+  }
+  &__Title {
+    text-align: center;
+    margin: 6rem 0;
+  }
+}

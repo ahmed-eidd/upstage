@@ -8,4 +8,8 @@
   font-weight: bold;
   border-bottom: 1px solid rgba($color: $color-grey-light, $alpha: .5);
   padding-bottom: 2rem;
+
+  p {
+    text-align: center;
+  }
 }

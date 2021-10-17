@@ -1,6 +1,11 @@
 @import '../../sass/abstracts/index';
 
 .nav {
+
+  &__btns {
+    display: flex;
+    gap: 1rem;
+  }
   position: absolute;
   top: 0;
   z-index: 10;

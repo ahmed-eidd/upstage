@@ -8,16 +8,29 @@
   background-color: rgba($color: #000000, $alpha: 0.5);
 }
 
+.size_m {
+  width: 82rem;
+}
+
+.size_s {
+  width: 60rem;
+}
+
 .Modal {
   background-color: white;
-  width: 82rem;
   position: relative;
   border-top-left-radius: $border-raduis-m;
   border-top-right-radius: $border-raduis-m;
 
+
+  &:focus {
+    outline: none;
+  }
+  
+
   &__CloseBtn {
-    top: -25%;
-    right: -5%;
+    top: -35px;
+    right: -35px;
     position: absolute;
     height: 8.5rem;
     width: 8.5rem;
@@ -42,5 +55,9 @@
     background-color: $color-primary;
     text-align: center;
     padding: 2rem;
+  }
+
+  &__Content {
+    padding: 3rem;
   }
 }
