@@ -13,27 +13,23 @@ import PageSix from './Prototypes/PageSix/PageSix';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import PageSeven from './Prototypes/PageSeven/PageSeven';
+import AuthLayout from './components/AuthLayout/AuthLayout';
 
 function App() {
   return (
-    // <Route path='/'>
-    //   <Route component={Layout}>
-    //     <Route component={Home} path='/' exact />
-    //   </Route>
-    //   <Route component={Dashboard}>
-    //     <Route path='/login' exact component={CatalogOfPlay} />
-    //     <Route path='/page2' exact component={PageTwo} />
-    //     <Route path='/page3' exact component={PageThree} />
-    //   </Route>
-    // </Route>
     <Switch>
       <AppRoute exact path='/' layout={Layout} component={Home} />
-      <AppRoute exact path='/page1' layout={Dashboard} component={CatalogOfPlay} />
+      <AppRoute
+        exact
+        path='/page1'
+        layout={Dashboard}
+        component={CatalogOfPlay}
+      />
       <AppRoute exact path='/page2' layout={Dashboard} component={PageTwo} />
-      <AppRoute exact path='/page3' layout={Dashboard} component={PageThree} />
-      <AppRoute exact path='/page4' layout={Dashboard} component={PageFour} />
+      <AppRoute exact path='/page3' layout={AuthLayout} component={PageThree} />
+      <AppRoute exact path='/page4' layout={AuthLayout} component={PageFour} />
       <AppRoute exact path='/page5' layout={Dashboard} component={PageFive} />
-      <AppRoute exact path='/page6' layout={Dashboard} component={PageSix} />
+      <AppRoute exact path='/page6' layout={AuthLayout} component={PageSix} />
       {/* <AppRoute exact path='/page7' layout={Dashboard} component={PageSeven} /> */}
     </Switch>
   );
